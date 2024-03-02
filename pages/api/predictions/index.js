@@ -18,7 +18,8 @@ export default async function handler(req, res) {
     if (response.status !== 201) {
         let error = await response.json();
         res.statusCode = 500;
-        res.end(JSON.stringify({ detail: error.detail }));
+        console.log("失败："+error.detail)
+        res.end(JSON.stringify({ detail: "服务器出错,请稍后再试" }));
         return;
     }
 
