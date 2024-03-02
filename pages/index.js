@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -80,6 +81,7 @@ export default function Home() {
             )}
         </div>
             <Analytics />
+            <SpeedInsights />
         </>
 
     );
